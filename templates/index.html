@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>                                 	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:rgb(255, 60, 0)">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predictive analysis</h2>
+            <h3>ENTER GEM DETAILS</h3>
+            <h3>Enter the caret of gem?</h3><input id="caret" name="caret_type" type="number " placeholder="eg .0.3 Enter value in between 0.1-5">
+	    
+	    <h3>What is the color of gem?</h3><select name="color_type" id="color" required="required"></br>
+		<option value="E">E</option>
+                <option value="G">G</option>
+                <option value="F">F</option>
+                <option value="D">D</option>
+                <option value="H">H</option>
+		<option value="J">J</option>
+		<option value="I">I</option>
+	    </select>
+            <h3>Enter the table_type of gem?</h3><input id="table" name="table_type" type="number " placeholder="eg.56 Enter value in between 50-80">
+
+            <h3>What is the cut of gem?</h3><select name="cut_type" id="cut" required="required">
+                <option value="Ideal">Ideal</option>
+                <option value="Premium">Premium</option>
+                <option value="Very Good">Very Good</option>
+                <option value="Good">Good</option>
+                <option value="Fair">Fair</option>
+                <option value="Fair">CNG</option>
+	    </select>
+	    <h3>Enter the depth of gem?</h3><input id="depth" name="depth_type" type="number " placeholder="eg.60.2 Enter value in between 50-75">
+	    
+
+            
+                
+
+	    <h3>What is the clarity of gem?</h3><select name="clarity_type" id="clarity" required="required">
+                <option value="SI1">SI1</option>
+                <option value="IF">IF</option>
+                <option value="VVS2">VVS2</option>
+                <option value="VS1">VS1</option>
+                <option value="VVS1">VVS1</option>
+		<option value="VS2">VS2</option>
+		<option value="SI2">SI2</option>
+                <option value="SI2">CNG</option>
+	    
+            
+            </select>
+            
+            <br><br><button id="sub" type="submit ">Selling Price</button>
+            <br>
+        </form>
+	<br><h1>{{prediction_text}}<h1>
+    </div>
+    <style>
+        body {
+            background-color: aqua;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+	#caret_type {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #caret_type:hover {
+            background-color: coral;
+        }
+        
+        #cut_type {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #cut_type:hover {
+            background-color: coral;
+        }
+        #color_type {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #color_type:hover {
+            background-color: coral;
+        }
+        
+        #clarity_type {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #clarity_type:hover {
+            background-color: coral;
+        }
+	#depth_type {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #depth_type:hover {
+            background-color: coral;
+        }
+	#table_type {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #table_type:hover {
+            background-color: coral;
+        }
+	#sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+	#caret {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+	#cut {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+	#color {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+	#depth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #table {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #clarity {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+            
+
+
+    </style>
+</body>
+
+</html>

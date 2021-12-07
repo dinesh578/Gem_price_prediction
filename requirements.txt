@@ -1,0 +1,11 @@
+flask
+numpy 
+pandas
+category_encoders 
+matplotlib
+seaborn 
+plotly
+sklearn
+jsonify
+requests
+flask_ngrok
